@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Design System - Variáveis de Cores e Fontes */
+:root {
+    --cor-principal: #cc0224;
+    --cor-secundaria: #3b3b3b;
+    --cor-fundo: #000000;
+    --cor-texto: #cc0224;
+    --cor-branco: #ffffff;
+    --cor-cinza-claro: #fafafa;
+    --cor-kwami: #ffffff;
+    --cor-vilao: #d09aff;
+
+    --font-principal: 'Poppins', sans-serif;
+    --shadow-suave: 0 4px 12px rgba(255, 0, 0, 0);
+
+    /* Cores do texto */
+    --cor-ladybug: #790215;
+    --cor-catnoir: #1a1a1a;
+    --cor-marinette: #1e90ff; /* Azul da Marinette */
+    --cor-adrien: #ffc700; /* Dourado do Adrien */
+    --cor-tikki: #ff6347;   /* Vermelho da Tikki */
+    --cor-plagg: #2e8b57;   /* Verde do Plagg */
+    --cor-hawkmoth: #6a0dad; /* Roxo do Hawk Moth */
+}
+
+/* Estilos globais e tipografia */
+body {
+    font-family: var(--font-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Header e Navegação */
+.main-header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-suave);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: rgba(230, 39, 39, 0.1);
+    border-radius: 5px;
+}
+
+/* Seções Principais */
+main {
+    padding: 2rem 0;
+}
+
+.hero-section {
+    background-image: url('https://via.placeholder.com/1600x600?text=Cena+de+Paris+com+Ladybug');
+    background-size: cover;
+    background-position: center;
+    color: var(--cor-branco);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(83, 83, 83, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.8rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #444074;
+}
+
+.personagens-section {
+    padding: 4rem 0;
+}
+
+.personagem-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.personagem-card {
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: var(--shadow-suave);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.personagem-card:hover {
+    transform: translateY(-10px);
+}
+
+.personagem-card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-info {
+    padding: 1.5rem;
+}
+
+.kwami-card {
+    background-color: var(--cor-kwami);
+}
+
+.vilao-section {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 4rem 0;
+}
+
+.vilao-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.vilao-info img {
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--cor-principal);
+    margin-bottom: 1rem;
+}
+
+.galeria-section {
+    background-color: var(--cor-cinza-claro);
+    padding: 4rem 0;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.galeria-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Acessibilidade */
+#acessibilidade-menu {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.acessibilidade-joaninha {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.acessibilidade-joaninha.preta {
+    background-color: var(--cor-secundaria);
+}
+
+.acessibilidade-joaninha:hover {
+    transform: scale(1.1);
+}
+
+.opcoes-acessibilidade {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--cor-branco);
+    border-radius: 8px;
+    box-shadow: var(--shadow-suave);
+}
+
+.opcoes-acessibilidade.visivel {
+    display: flex;
+}
+
+.opcoes-acessibilidade button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.opcoes-acessibilidade button:hover {
+    background-color: #555555;
+}
+
+/* Modo Alto Contraste */
+body.alto-contraste {
+    background-color: #059100;
+    --cor-principal: #000000;
+    --cor-vilao: #8800ff;
+    color: #000000;
+}
+
+body.alto-contraste .main-header,
+body.alto-contraste .acessibilidade-joaninha,
+body.alto-contraste .opcoes-acessibilidade,
+body.alto-contraste .secao-personagens,
+body.alto-contraste .personagem-card {
+    background-color: #000000;
+    color: #059100;
+}
+
+/* Estilos de Cores para o Nome dos Personagens */
+.ladybug-text { color: var(--cor-ladybug); }
+.catnoir-text { color: var(--cor-catnoir); }
+.marinette-text { color: var(--cor-marinette); }
+.adrien-text { color: var(--cor-adrien); }
+.tikki-text { color: var(--cor-tikki); }
+.plagg-text { color: var(--cor-plagg); }
+.hawkmoth-text { color: var(--cor-hawkmoth); }
+
+/* Para a seção do vilão, mude a cor do h2 para a cor do vilão */
+.vilao-section .section-title {
+    color: var(--cor-vilao);
+}
